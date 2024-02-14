@@ -3,7 +3,7 @@ import { UilSearch, UilMapMarker } from "@iconscout/react-unicons";
 const Inputs = () => {
   return (
     <div className="flex flex-row justify-center my-6 mx-1 sm:mx-10 sm:gap-8 gap-6">
-      <div className="flex flex-row w-full items-center justify-center space-x-4 bg-white shadow-xl rounded-lg p-2 pr-4">
+      <div className="flex flex-row w-full items-center justify-center space-x-4 bg-white shadow-xl rounded-lg p-1 pr-4">
         <input
           type="text"
           name=""
