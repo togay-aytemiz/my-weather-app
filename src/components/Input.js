@@ -2,26 +2,26 @@ import { UilSearch, UilMapMarker } from "@iconscout/react-unicons";
 
 const Inputs = () => {
   return (
-    <div className="flex flex-row justify-center my-6 mx-10">
-      <div className="flex flex-row w-3/4 items-center justify-center space-x-4">
+    <div className="flex flex-row justify-center my-6 mx-1 sm:mx-10 sm:gap-8 gap-6">
+      <div className="flex flex-row w-full items-center justify-center space-x-4 bg-white shadow-xl rounded-lg p-2 pr-4">
         <input
           type="text"
           name=""
           id=""
           placeholder="Search..."
-          className="text-xl font-light p-2 focus:outline-none w-full shadow-xl rounded-lg capitalize"
+          className="text-xl font-light p-2 focus:outline-none w-full capitalize"
         />
         <UilSearch
-          size={30}
-          className="text-white cursor-pointer transition ease-out hover:scale-125"
+          size={35}
+          className="text-gray-400 cursor-pointer transition ease-out hover:scale-125"
         />
         <UilMapMarker
-          size={30}
-          className="text-white cursor-pointer transition ease-out hover:scale-125"
+          size={35}
+          className="text-gray-400 cursor-pointer transition ease-out hover:scale-125"
         />
       </div>
 
-      <div className="flex flex-row w-1/4 justify-end items-center ">
+      <div className="flex flex-row justify-end items-center ">
         <button
           name="metric"
           className="text-xl text-white font-light transition ease-out hover:scale-125"

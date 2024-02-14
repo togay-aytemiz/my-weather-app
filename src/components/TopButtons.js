@@ -13,7 +13,7 @@ const TopButtons = () => {
         return (
           <button
             key={city.id}
-            className="text-white text-lg font-medium hover:scale-125 transition ease-out"
+            className="text-white text-lg font-medium sm:hover:scale-125 sm:transition ease-out"
           >
             {city.title}
           </button>
