@@ -8,11 +8,11 @@ import {
   UilSunset,
 } from "@iconscout/react-unicons";
 
-const TemperatureDetails = () => {
+const TemperatureDetails = ({ details }) => {
   return (
     <div>
       <div className="flex items-center justify-center sm:text-2xl text-xl text-cyan-500">
-        <p>Clean</p>
+        <p>{details.main}</p>
       </div>
 
       <div className="flex flex-row items-center justify-evenly text-white py-3">
@@ -24,7 +24,7 @@ const TemperatureDetails = () => {
         />
 
         {/* actual degree */}
-        <p className="text-5xl"> 34°</p>
+        <p className="text-5xl">{details.temp}°</p>
 
         {/* div for other details */}
         <div className="flex flex-col items-start space-y-2 ">
