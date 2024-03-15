@@ -1,6 +1,6 @@
-const TopButtons = () => {
+const TopButtons = ({ setLocation }) => {
   const cities = [
-    { id: 1, title: "İstanbul" },
+    { id: 1, title: "Istanbul" },
     { id: 2, title: "London" },
     { id: 3, title: "Sydney" },
     { id: 4, title: "Tokyo" },
@@ -14,6 +14,7 @@ const TopButtons = () => {
           <button
             key={city.id}
             className="text-white sm:text-lg text-base sm:font-medium font-normal sm:hover:scale-125 sm:transition ease-out"
+            onClick={() => setLocation(city.title)}
           >
             {city.title}
           </button>

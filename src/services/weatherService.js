@@ -47,7 +47,7 @@ const formatForecastWeather = (data) => {
   daily = daily.slice(1, 6).map((day) => {
     const date = new Date(day.dt);
     return {
-      date,
+      day,
     };
   });
   return { timezone, daily, hourly };
@@ -65,7 +65,7 @@ const getFormattedWeatherData = async (searchParams) => {
     `lat=${lat}&lon=${lon}&exclude=current,minutely,alerts&units=metric`
   ).then(formatForecastWeather);
 
-  return formattedCurrentWeather;
+  return { formattedCurrentWeather, formattedForecastWeather };
 };
 
 export default getFormattedWeatherData;

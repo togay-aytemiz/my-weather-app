@@ -1,9 +1,12 @@
+import moment from "moment";
+
 const TimeAndLocation = ({ cityAndCountry }) => {
   return (
     <div>
       <div className="flex items-center justify-center my-6">
         <p className="text-white sm:text-xl text-lg font-extralight">
-          Tuesday, 31 May 2022 | 12:46 PM
+          {/* Tuesday, 31 May 2022 | 12:46 PM */}
+          {moment().format("MMMM Do YYYY, h:mm a")}
         </p>
       </div>
 
