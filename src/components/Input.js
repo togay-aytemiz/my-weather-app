@@ -1,13 +1,15 @@
 import { UilSearch, UilMapMarker } from "@iconscout/react-unicons";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 const Inputs = ({ setLocation }) => {
   const [inputValue, setInputValue] = useState("");
+  const inputRef = useRef(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setLocation(inputValue);
     setInputValue("");
+    inputRef.current.blur();
   };
 
   return (
@@ -24,6 +26,8 @@ const Inputs = ({ setLocation }) => {
             placeholder="Search..."
             className="text-xl font-light p-2 focus:outline-none w-full capitalize"
             onChange={(e) => setInputValue(e.target.value)}
+            value={inputValue}
+            ref={inputRef}
           />
           <button>
             <UilSearch
